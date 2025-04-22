@@ -104,7 +104,7 @@
     </footer>
 
     <script>
-        // Configuração do Supabase
+        
         const SUPABASE_URL = "https://wofpvlmkclgdpjeugiid.supabase.co";
         const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndvZnB2bG1rY2xnZHBqZXVnaWlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIzMjAyNzIsImV4cCI6MjA1Nzg5NjI3Mn0.Nwr8OM_HF2LUNcpf6P3I6L4MUtNCRyucUPWP3YUa6FI"; // Substitua pela chave correta
 
@@ -139,12 +139,12 @@
                     alert("Erro ao excluir livro: " + error.message);
                 } else {
                     alert("Livro excluído com sucesso!");
-                    listarLivros(); // Atualiza a lista após exclusão
+                    listarLivros(); 
                 }
             }
         }
 
-        // Carregar livros ao abrir a página
+        
         document.addEventListener("DOMContentLoaded", listarLivros);
     </script>
 </body>
