@@ -1,88 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROTA DO SABER</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        .button {
-            background-color: white;
-            color: #4CAF50;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .button:hover {
-            background-color: #ddd;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-        }
-        .objetivos, .pontos-troca, .contato {
-            background-color: #f2f2f2;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rota do Saber</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-modern {
+      background-color: white;
+      color: #4CAF50;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-modern:hover {
+      background-color: #f1f1f1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .site-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .container-main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card-custom {
+      background-color: white;
+      border-radius: 12px;
+      padding: 0;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .card-header-custom {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 24px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-body-custom {
+      padding: 24px;
+    }
+
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div>Bem-vindo à Nosso Projeto Rota do Saber</div>
-        <div class="header-buttons">
-            <a href="CatalogoExcluir.html" class="button">Estoque</a>
-            <a href="CatalogoRegistrar.html" class="button">Registrar Livro</a>
-            <a href="login.html" class="button">Login</a>
-        </div>
-    </header>
-    
-    <section class="objetivos">
-        <h2>Objetivos</h2>
-        <p>Nosso objetivo é promover a troca sustentável de produtos e serviços entre a comunidade.</p>
+
+  <header>
+    <div class="d-flex gap-2">
+      <a href="CatalogoExcluir.html" class="btn-modern">Estoque</a>
+      <a href="CatalogoRegistrar.html" class="btn-modern">Registrar Livro</a>
+    </div>
+    <div class="site-title">Rota do Saber</div>
+    <div>
+      <a href="login.html" class="btn-modern">Login</a>
+    </div>
+  </header>
+
+  <main class="container-main">
+    <section class="card-custom">
+      <div class="card-header-custom">
+        <i class="bi bi-arrow-left-right"></i> Objetivos
+      </div>
+      <div class="card-body-custom">
+        <p>Nosso objetivo é incentivar a circulação de conhecimento por meio da troca de livros entre pessoas. Ao anunciar um livro que você deseja doar, você recebe créditos na plataforma. Esses créditos podem ser usados para resgatar outros livros disponíveis no sistema, criando uma rede colaborativa e sustentável de leitura.</p>
+      </div>
     </section>
-    
-    <section class="pontos-troca">
-        <h2>Pontos de Troca</h2>
-        <p>Confira os locais disponíveis para realizar trocas seguras e eficientes.</p>
+
+    <section class="card-custom">
+      <div class="card-header-custom">
+        <i class="bi bi-geo-alt"></i> Pontos de Troca
+      </div>
+      <div class="card-body-custom">
+        <p>Confira os locais disponíveis para realizar trocas seguras:</p>
+        <p><strong>Universidade Positivo - Campus Osório</strong></p>
+      </div>
     </section>
-    
-    <section class="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco pelo email: contato@plataforma.com</p>
+
+    <section class="card-custom">
+      <div class="card-header-custom">
+        <i class="bi bi-envelope-fill"></i> Contato
+      </div>
+      <div class="card-body-custom">
+        <p>Entre em contato pelo e-mail: <a href="mailto:contato@plataforma.com" class="text-decoration-none text-success">contato@plataforma.com</a></p>
+      </div>
     </section>
-    
-    <footer>
-        Projeto Cultura Startup
-    </footer>
+  </main>
+
+  <footer>
+    Projeto Cultura Startup &copy; 2025
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
