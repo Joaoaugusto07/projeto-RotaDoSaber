@@ -3,67 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrar.css">
     <title>Login</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f2f2f2;
-        }
-        .login-container {
-            background-color: white;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 280px;
-        }
-        input {
-            width: 90%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-        .login-button, .registrar {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            width: 50%;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .login-button:hover, .registrar:hover {
-            background-color: #45a049;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            text-align: center;
-        }
-    </style>
+    
 </head>
 <body>
     <div class="login-container">
-        <h1>Inicio</h1> 
+        <a href="index.html" class="Inicio">Inicio</a>
         <h2>Registre-se</h2>
         <form onsubmit="RegistrarUsuario(event)">
             <input type="email" id="email" placeholder="Email" required>
@@ -80,47 +26,7 @@
         Projeto Cultura Startup
     </footer>
 
-    <script>
-     const SUPABASE_URL = "https://wofpvlmkclgdpjeugiid.supabase.co";
-        const SUPABASE_ANON_KEY = ;
-        
-        
-        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    
-        // Função para Registrar usuario
-        async function RegistrarUsuario() {
-           
-               const nome = document.getElementById("nome").value;
-               const email =  document.getElementById("email").value;
-               const senha = document.getElementById("senha").value;
-               const confirmarSenha = document.getElementById("confirmarSenha").value;
-                //created_at: new Date().toISOString() usado apenas para objeto 
-            
-    
-            if (senha !== confirmarSenha){
-                alert ("As senhas não estão iguais");
-                return;
-            }
-            const { data, error } = await supabaseClient.auth.signUp({
-                
-                email: email,
-                password: senha,
-                options: {
-                    data: {
-                        nome: nome 
-                    }
-                }
-            });
-            if (error) {
-                alert("Erro ao registrar usuario: " + error.message);
-            } else {
-                alert("Usuário registrado com sucesso! Verifique seu e-mail para confirmar o cadastro.");
-                document.querySelector("form").reset()
-            }
-
-        }
-    
-
+    <script src="registrar.js">
     </script>
 </body>
 </html>

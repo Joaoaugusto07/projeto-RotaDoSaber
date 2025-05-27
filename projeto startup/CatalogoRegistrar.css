@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+.button {
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.button:hover {
+    background-color: #ddd;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+}
+.cadastro-livros, .lista-livros {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+input, textarea, button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    background-color: #45a049;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    background: white;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
