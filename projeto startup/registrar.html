@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrar.css">
+    <title>Login</title>
+    
+</head>
+<body>
+    <div class="login-container">
+        <a href="index.html" class="Inicio">Inicio</a>
+        <h2>Registre-se</h2>
+        <form onsubmit="RegistrarUsuario(event)">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <input type="password" id="confirmarSenha" placeholder="Confirme Senha" required>
+            <input type="text" id="nome" placeholder="Nome" required>
+            <div class="button-container">
+                <button type="submit" class="login-button">Registrar</button>
+                <a href="login.html" class="registrar">Login</a>
+            </div>
+        </form>
+    </div>
+    <footer>
+        Projeto Cultura Startup
+    </footer>
+
+    <script src="registrar.js">
+    </script>
+</body>
+</html>
