@@ -9,4 +9,8 @@ Tecnologias ultilizadas:
 - JavaScript
 - Supabase (Auth + Database)
 
+Ao criar as tabelas no Supabase é necessario inserir duas tabelas 
+1° - BOOKS - campos - titulo/autor/ano_publicacao/isbn/genero/editora/descricao/created_at/user.id/vendido(boolean)
+2° - Usuario - campos - nome/email/senha/id
+
 🚧 Projeto em desenvolvimento 🚧

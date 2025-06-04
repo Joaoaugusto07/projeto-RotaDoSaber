@@ -6,7 +6,7 @@
 
         // Função para listar livros
         async function listarLivros() {
-            let { data, error } = await supabaseClient.from("BOOKS").select("*");
+            let { data, error } = await supabaseClient.from("BOOKS").select("*").eq("vendido",false);
 
             if (error) {
                 alert("Erro ao listar livros: " + error.message);
@@ -24,15 +24,14 @@
             }
         }
 
-        // Função para excluir um livro
+        // Função para resgatar um livro
         async function excluirLivro(id) {
-            if (confirm("Tem certeza que deseja excluir este livro?")) {
-                let { error } = await supabaseClient.from("BOOKS").delete().eq("id", id);
-
+            if (confirm("Tem certeza que deseja Resgatar este livro?")) {
+                let { error } = await supabaseClient.from("BOOKS").update({vendido: true}).eq("id", id)
                 if (error) {
-                    alert("Erro ao excluir livro: " + error.message);
+                    alert("Erro ao Resgatar livro: " + error.message);
                 } else {
-                    alert("Livro excluído com sucesso!");
+                    alert("Livro Resgatado com sucesso!");
                     listarLivros(); 
                 }
             }

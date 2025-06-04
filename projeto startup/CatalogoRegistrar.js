@@ -16,6 +16,7 @@
                 editora: document.getElementById("editora").value,
                 descricao: document.getElementById("descricao").value,
                 created_at: new Date().toISOString()
+                user_id: user_id
             };
     
             let { data, error } = await supabaseClient.from("BOOKS").insert([livro]);
@@ -29,12 +30,23 @@
             }
         }
     
-        // Função para listar livros
-        async function listarLivros() {
-            let { data, error } = await supabaseClient.from("BOOKS").select("*");
+        // Função para listar c/ID livros
+        async function listarLivrosDoUsuario () {
+            let { data, error } = await supabaseClient.auth.hetUser;
+            if (userError || !user) {
+                alert("error ao obter usuario logado");
+                return;
+            }
     
+            const userId = user.id;
+            
+            let { data, error} = await supabaseClient
+            .from("BOOKS")
+            .select("*")
+            .eq("user+id", userId);
+
             if (error) {
-                alert("Erro ao listar livros: " + error.message);
+                alert("Erro ao listar livros : " + error.message);
             } else {
                 let lista = document.getElementById("listaLivros");
                 lista.innerHTML = "";

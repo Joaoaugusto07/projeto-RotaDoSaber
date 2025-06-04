@@ -11,7 +11,7 @@ const SUPABASE_URL = "https://wofpvlmkclgdpjeugiid.supabase.co";
                const email =  document.getElementById("email").value;
                const senha = document.getElementById("senha").value;
                const confirmarSenha = document.getElementById("confirmarSenha").value;
-                //created_at: new Date().toISOString() usado apenas para objeto 
+                
             
     
             if (senha !== confirmarSenha){
