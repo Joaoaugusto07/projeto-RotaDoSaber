@@ -15,8 +15,8 @@
                 genero: document.getElementById("genero").value,
                 editora: document.getElementById("editora").value,
                 descricao: document.getElementById("descricao").value,
-                created_at: new Date().toISOString()
-                user_id: user_id
+                created_at: new Date().toISOString(),
+                user_id: user_id,
             };
     
             let { data, error } = await supabaseClient.from("BOOKS").insert([livro]);
@@ -24,7 +24,7 @@
             if (error) {
                 alert("Erro ao adicionar livro: " + error.message);
             } else {
-                alert("Livro adicionado com sucesso!");
+                alert("Livro adicionado com sucesso! Leve ao Ponto de troca.");
                 document.querySelector("form").reset();
                 listarLivros();
             }

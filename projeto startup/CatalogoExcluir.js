@@ -31,7 +31,7 @@
                 if (error) {
                     alert("Erro ao Resgatar livro: " + error.message);
                 } else {
-                    alert("Livro Resgatado com sucesso!");
+                    alert("Livro Resgatado com sucesso! Estara disponivel em ate 48 horas no ponto de coleta");
                     listarLivros(); 
                 }
             }
